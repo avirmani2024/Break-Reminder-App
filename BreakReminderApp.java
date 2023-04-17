@@ -1,15 +1,14 @@
-import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class BreakReminderApp {
-    private int breakLength; // in minutes
+class BreakReminderApp {
+   //private int breakLength; // in minutes
     private int breakFrequency; // in minutes
     private Timer timer;
     private boolean isBreakTime;
 
     public BreakReminderApp(int breakLength, int breakFrequency) {
-        this.breakLength = breakLength;
+        //this.breakLength = breakLength;
         this.breakFrequency = breakFrequency;
         this.isBreakTime = false;
     }
@@ -43,5 +42,9 @@ public class BreakReminderApp {
         } else {
             System.out.println("Schedule is not running.");
         }
+    }
+
+    public boolean isRunning() {
+        return timer != null;
     }
 }
